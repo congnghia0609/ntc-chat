@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ntc-chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ntc-chat Server.">
+    <meta name="author" content="ntc">
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/chatme.css" rel="stylesheet">
+</head>
+
+<body ng-app="chatme">
+    <div class="container-fluid">
+        <div>
+            <nav class="navbar navbar-inverse navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ntc-chat Client</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-right" role="search" ng-controller="NickNameController" name="nickNameForm">
+                        <div class="form-group" ng-class="{'has-error' : nickNameForm.nickName.$invalid }">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="nickname-icon">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                </span>
+                                <input type="text" class="form-control" flash-on-change placeholder="Nickname" name="nickName" ng-model="nickName" aria-describedby="nickname-icon" ng-maxlength="20">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" ng-click="changeNickname()">Change</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <div ng-view="" class="main-content-wrapper"></div>
+        <div class="footer-content">
+            <footer>
+                <p>&copy; ntc</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="scripts/vendor/jquery-1.11.1.min.js"></script>
+    <script src="scripts/vendor/angular.min.js"></script>
+    <script src="scripts/vendor/angular-route.min.js"></script>
+    <script src="scripts/vendor/angular-animate.min.js"></script>
+    <script src="scripts/vendor/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/chat.js"></script>
+    <script src="scripts/controllers/room.js"></script>
+    <script src="scripts/controllers/modalRoom.js"></script>
+    <script src="scripts/controllers/chat.js"></script>
+    <script src="scripts/controllers/nickName.js"></script>
+    <script src="scripts/directives/scrollDiv.js"></script>
+    <script src="scripts/directives/flash.js"></script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ntc-chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ntc-chat Server.">
+    <meta name="author" content="ntc">
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 style="text-align: center;">ntc-chat 404.</h1>
+    </div>
+</body>
+
+</html> -->

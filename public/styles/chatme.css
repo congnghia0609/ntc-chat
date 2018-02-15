@@ -1,0 +1,94 @@
+body,html {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.row-wrapper {
+    min-height: 100%;
+    height: 100%;
+}
+
+.column-wrapper {
+    min-height: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.main-content-wrapper {
+    height: 85%;
+    min-height: 85%;
+    overflow-y: auto;
+
+}
+
+.message-div {
+    min-height: 100%;
+    height: 100%;
+}
+
+.message-area {
+    min-height: 85%;
+    height: 85%;
+    overflow: scroll;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.flash {
+
+    -moz-animation: flash 1s ease-out;
+    -moz-animation-iteration-count: 1;
+
+    -webkit-animation: flash 1s ease-out;
+    -webkit-animation-iteration-count: 1;
+
+    -ms-animation: flash 1s ease-out;
+    -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash {
+    0% {
+        background-color: none;
+    }
+    50% {
+        background-color: #75D08D;
+    }
+    100% {
+        background-color: none;
+    }
+}
+
+@-moz-keyframes flash {
+    0% {
+        background-color: none;
+    }
+    50% {
+        background-color: #75D08D;
+    }
+    100% {
+        background-color: none;
+    }
+}
+
+@-ms-keyframes flash {
+    0% {
+        background-color: none;
+    }
+    50% {
+        background-color: #75D08D;
+    }
+    100% {
+        background-color: none;
+    }
+}
+
+.message-text {
+    word-wrap: break-word;
+}

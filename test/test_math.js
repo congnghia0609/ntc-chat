@@ -1,0 +1,15 @@
+var total = 13;
+var paging = 10;
+var totalPage = Math.ceil(total / paging);
+var page = 15;
+page = Math.min(Math.max(1, page), totalPage);
+var min_index = Math.max(0, (page - 1) * paging);
+var max_index = Math.min(min_index + paging, total);
+console.log('====================================');
+console.log('total: ' + total);
+console.log('paging: ' + paging);
+console.log('totalPage: ' + totalPage);
+console.log('page: ' + page);
+console.log('min_index: ' + min_index);
+console.log('max_index: ' + max_index);
+console.log('====================================');
